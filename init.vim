@@ -13,7 +13,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"" icons? what?
+"" icons? what? fuck yes.
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -23,8 +23,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Colours
 set termguicolors
-set background=dark
+syntax on
 colorscheme base16-irblack
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 
 ""Relative line numbers
 ""au BufReadPost * set relativenumber
