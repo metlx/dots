@@ -3,6 +3,9 @@ set fileencoding=utf-8
 
 call plug#begin('~/.vim/plugged')
 
+" Pop-up file manager
+Plug 'https://github.com/scrooloose/nerdtree.git'
+
 " lang pacs
 Plug 'sheerun/vim-polyglot'
 
@@ -17,6 +20,23 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+" Map F2 to NERDTreeToggle
+map <F2> :NERDTreeToggle<CR>
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
+    \ "Untracked" : "-",
+    \ "Renamed"   : "/",
+    \ "Unmerged"  : "=",
+    \ "Deleted"   : "x",
+    \ "Dirty"     : "*",
+    \ "Clean"     : "`",
+    \ "Unknown"   : "?"
+    \ }
+
+let g:NERDTreeIgnore = ['\.pyc$', '\.o$', '\.lib$', '\.a$', '\.dll$', '\.so$', '\.so\.', '\.dylib$', '\.exe$', '\.out$', '\.app$', '\.stackdump$']
 
 "" tab bar
 let g:airline#extensions#tabline#enabled = 1
@@ -36,8 +56,6 @@ hi! NonText ctermbg=NONE guibg=NONE
 set ignorecase
 set smartcase
 
-"" clean her up
-set noshowmode
 
 " Return to the same spot in the file that we were at
 if has("autocmd")
