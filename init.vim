@@ -71,7 +71,7 @@ function! ClipboardPaste()
   let @@ = system('xclip -o -selection clipboard')
 endfunction
 
-" im lazy close my shit
+" close my shit
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
