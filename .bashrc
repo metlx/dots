@@ -8,7 +8,7 @@ nc="$(tput sgr0)"
 # exports
 export PATH="${HOME}/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:"
 export PATH="${PATH}/usr/local/sbin:/opt/bin:/usr/bin/core_perl:/usr/games/bin:"
-export PS1="\[$blue\]┌──[ \[$cyan\]$(echo $(/opt/vpnbash.sh))\[$blue\] ]\[$darkgrey\]-\[$blue\][ \[$cyan\]\H \[$darkgrey\]\w\[$darkgrey\]\[$blue\] ]\[$blue\]\n\[$blue\]└──╼ \[$darkgrey\]# \[$nc\]"
+export PS1="\[$blue\]┌──[ \[$cyan\]$(echo $(/opt/vpnbash.sh))\[$blue\] ]\[$darkgrey\]-\[$blue\][ \[$cyan\]\H \[$darkgrey\]\w\[$blue\] ]\n\[$blue\]└──╼ \[$darkgrey\]# \[$nc\]"
 export LD_PRELOAD=""
 export EDITOR="vim"
 
