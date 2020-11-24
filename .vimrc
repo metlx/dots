@@ -8,24 +8,30 @@ call vundle#begin()
 " Bundles
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
-Plugin 'TomNomNom/xoria256.vim'
 Plugin 'fatih/vim-go'
 
 call vundle#end()
 
-
 " Required for vundle
-"filetype plugin indent on 
+filetype plugin indent on 
 filetype plugin on 
 
 " Highlighting
 syntax on
 set encoding=utf-8
 
+" Colours
+set background=dark
+syntax on
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+
 " Airline config
+let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
