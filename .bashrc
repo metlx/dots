@@ -1,8 +1,6 @@
 # colors
 grey="$(tput bold ; tput setaf 0)"
-white="$(tput bold ; tput setaf 7)"
 blue="$(tput bold; tput setaf 4)"
-cyan="$(tput bold; tput setaf 6)"
 nc="$(tput sgr0)"
 
 # exports
