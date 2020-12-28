@@ -6,29 +6,31 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Bundles
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
 
 call vundle#end()
 
-" Required for vundle
-filetype plugin indent on 
-filetype plugin on 
+set autowrite
 
-" Highlighting
+" go
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+
+" Required for vundle
+filetype plugin indent on
+filetype plugin on
+colorscheme unicon
 syntax on
 set encoding=utf-8
-
-" Colours
-set background=dark
-syntax on
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+set cursorline
 
 " Enable true color 启用终端24位色
 if exists('+termguicolors')
@@ -36,20 +38,6 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-
-" Airline config
-let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
 
 " History
 set history=50
@@ -79,7 +67,7 @@ set hlsearch
 set showmatch
 
 " Enable jumping into files in a search buffer
-set hidden 
+set hidden
 
 " Indentation
 set shiftwidth=4
