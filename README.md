@@ -1,2 +1,2 @@
 # dots
-some configs bro
+just some configs bro
