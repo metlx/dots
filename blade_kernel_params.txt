@@ -1,0 +1,1 @@
+GRUB_CMDLINE_LINUX="button.lid_init_state=open i915.enable_dpcd_backlight=0 nouveau.modeset=0"
