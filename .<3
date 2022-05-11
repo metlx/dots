@@ -3,4 +3,4 @@ onion soup
 thunder and lightning
 kingsland pasta
 booming burger
-in case of server acting up: npm i -g typescript typescript-language-server
+install tsserver for emacs: npm i -g typescript typescript-language-server
